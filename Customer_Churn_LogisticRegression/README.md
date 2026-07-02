@@ -173,35 +173,6 @@ This ensures all features contribute equally to model training.
 
 ---
 
-# Mathematical Intuition
-
-Logistic Regression models the probability that a sample belongs to a particular class.
-
-![Sigmoid Function](sf.png)
-
-First, the model computes a linear combination of the input features:
-
-```
-z = wᵀx + b
-```
-
-Where:
-
-- **x** = feature vector  
-- **w** = model weights  
-- **b** = bias term  
-
-This value is then passed through the **sigmoid function**:
-
-```
-σ(z) = 1 / (1 + e⁻ᶻ)
-```
-
-The sigmoid function converts any real value into a probability between **0 and 1**.
-
-```
-0 ≤ P(y = 1) ≤ 1
-```
 
 Decision rule:
 
@@ -258,7 +229,7 @@ Using multiple metrics provides a more complete understanding of model performan
 
 # Confusion Matrix
 
-![Confusion Matrix](cm1.png)
+![Confusion Matrix](CM.png)
 
 The confusion matrix shows:
 
@@ -273,7 +244,7 @@ This helps identify the types of errors made by the classifier.
 
 # ROC Curve
 
-![ROC Curve](roc1.png)
+![ROC Curve](ROC.png)
 
 The ROC curve shows the tradeoff between:
 
@@ -300,7 +271,7 @@ Large positive coefficients indicate features that increase churn probability.
 
 Large negative coefficients indicate features that reduce churn probability.
 
-![Feature Importance](fi1.png)
+![Feature Importance]
 
 ---
 
@@ -459,13 +430,7 @@ In such cases, tree ensembles or neural networks may perform better.
 
 ### v1 — Initial Implementation  
 Baseline logistic regression with preprocessing, cross-validation and evaluation.
-
-### v2 — Engineering Upgrade (12-3-2026)  
-- Added training time measurement.  
-- Added inference latency analysis.  
-- Added failure case auditing.  
-- Added dataset scaling experiment.  
-- Added engineering tradeoff discussion.  
+ 
 
 ---
 
